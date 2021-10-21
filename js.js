@@ -48,7 +48,7 @@ function calc(){
 
     document.getElementById("porcentaje").innerHTML = `<h4> 20% del Costo: $ ${util}</h4>
     `
-    document.getElementById("presupuesto").innerHTML = `<div class="card text-center border-success mb-3">
+    document.getElementById("presupuesto").innerHTML = `<div class="card text-white bg-primary mb-3 text-center border-primary">
     <div class="card-header ">
       <h4>Presupuesto</h4>
     </div>
