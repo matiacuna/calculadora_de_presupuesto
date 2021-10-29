@@ -70,23 +70,100 @@ function calcPreVenta(){
 //calculo el valor del area proyecto segun la categoria seleccioanda
 function calcProyect(){
 
+    let catP1 = document.getElementById("cat1").value;
+    let catP2 = document.getElementById("cat2").value;
+    let catP3 = document.getElementById("cat3").value;
+    let catP4 = document.getElementById("cat4").value;
+    let catP5 = document.getElementById("cat5").value;
+    let catP6 = document.getElementById("cat6").value;
+
+    if ( catP1 == "1" ){
+        co1 = co1 * valc1;
+    }
+    else if( catP1 == "2" ){
+        co1 = co1 * valc2;
+    }
+    else if( catP1 == "3" ){
+        co1 = co1 * valc3;
+    }
+    else if( catP1 == "4" ){
+        co1 = co1 * valce;
+    }
+
+//----------------------------------------
+    if ( catP2 == "1" ){
+        co2 = co2 * valc1;
+    }
+    else if( catP2 == "2" ){
+        co2 = co2  * valc2;
+    }
+    else if( catP2 == "3" ){
+        co2 = co2 * valc3;
+    }
+    else if( catP2 == "4" ){
+        co2 = co2  * valce;
+    }
+
+//----------------------------------------
+    if ( catP3 == "1" ){
+        co3 = co3 * valc1;
+    }
+    else if( catP3 == "2" ){
+        co3 = co3 * valc2;
+    }
+    else if( catP3 == "3" ){
+        co3 = co3 * valc3;
+    }
+    else if( catP3 == "4" ){
+        co3 = co3 * valce;
+    }
+
+//----------------------------------------
+    if ( catP4 == "1" ){
+        co4 = co4 * valc1;
+    }
+    else if( catP4 == "2" ){
+        co4 = co4 * valc2;
+    }
+    else if( catP4 == "3" ){
+        co4 = co4 * valc3;
+    }
+    else if( catP4 == "4" ){
+        co4 = co4 * valce;
+    }
+
+//----------------------------------------
+
+    if ( catP5 == "1" ){
+        co5 = co5 * valc1;
+    }
+    else if( catP5 == "2" ){
+        co5 = co5 * valc2;
+    }
+    else if( catP5 == "3" ){
+        co5 = co5 * valc3;
+    }
+    else if( catP5 == "4" ){
+        co5 = co5 * valce;
+    }
+
+//----------------------------------------
+
+    if ( catP6 == "1" ){
+        co6 = co6 * valc1;
+    }
+    else if( catP5 == "2" ){
+        co6 = co6 * valc2;
+    }
+    else if( catP5 == "3" ){
+        co6 = co6 * valc3;
+    }
+    else if( catP5 == "4" ){
+        co6 = co6 * valce;
+    }
+
+
     proyect = co1 + co2 + co3 + co4 + co5 + co6;
-
-    let catP = document.getElementById("cat").value;
-
-    if ( catP == "1" ){
-
-        proyect = proyect * valc1;
-    }
-    else if( catP == "2" ){
-        proyect = proyect * valc2;
-    }
-    else if( catP == "3" ){
-        proyect = proyect * valc3;
-    }
-    else if( catP == "4" ){
-        proyect = proyect * valce;
-    }
 
 
 }
