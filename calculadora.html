@@ -71,15 +71,15 @@ body{
 
 
 
-        <div class="accordion accordion-flush center border-info" id="accordionFlushExample">
+        <div class="accordion accordion-flush center border-info " id="accordionFlushExample" >
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Definir valor de horas
+              <button class="accordion-button collapsed " type="button"  style=" background-color: rgb(57, 225, 255); border-radius: 8px;" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Definir parametros
               </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
+              <div class="accordion-body" style="background-color: rgb(27, 114, 255); border-radius: 8px;">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon3" style="width: 320px;" style="width: 320px;">Valor de hora Pre-venta Proyecto </span>
                   <input style="text-align: right;" type="number" class="form-control"  value="0" id="valpp" aria-describedby="basic-addon3">
@@ -93,11 +93,19 @@ body{
                   <input style="text-align: right;" type="number" class="form-control"  value="0" id="valc2" aria-describedby="basic-addon3">
                 </div>
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon3" style="width: 320px;" style="width: 320px;">Valor de hora Categoría 3</span>
+                  <span class="input-group-text" id="basic-addon3" style="width: 320px;" style="width: 320px;">Valor de hora Categoría 3 (Externos)</span>
                   <input style="text-align: right;" type="number" class="form-control"  value="0" id="valc3" aria-describedby="basic-addon3">
                 </div>
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon3" style="width: 320px;" style="width: 320px;">Valor de hora Externos</span>
+                  <span class="input-group-text" id="basic-addon3" style="width: 320px;" style="width: 320px;">Costo de Licencia</span>
+                  <input style="text-align: right;" type="number" class="form-control"  value="0" id="lic" aria-describedby="basic-addon3">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon3" style="width: 320px;" style="width: 320px;">Cantidad De Usuarios</span>
+                  <input style="text-align: right;" type="number" class="form-control"  value="0" id="users" aria-describedby="basic-addon3">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon3" style="width: 320px;" style="width: 320px;">Porcentaje de utilidad</span>
                   <input style="text-align: right;" type="number" class="form-control"  value="0" id="valce" aria-describedby="basic-addon3">
                 </div>
               </div>
@@ -126,13 +134,13 @@ body{
 
                   <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon3" style="width: 320px;" style="width: 320px;">Armado de propuesta</span>
-                    <input style="text-align: right;" type="number" class="form-control"  value="0" id="pv2" aria-describedby="basic-addon3">
+                    <input style="text-align: right;" type="number" class="form-control"  placeholder="Horas"  id="pv2" aria-describedby="basic-addon3">
                   </div>
 
 
                   <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon3" style="width: 320px;">Presentaciones pre venta</span>
-                    <input style="text-align: right;" type="number" value="0" class="form-control" id="pv3" aria-describedby="basic-addon3">
+                    <input style="text-align: right;" type="number"  placeholder="Horas" class="form-control" id="pv3" aria-describedby="basic-addon3">
                   </div>
               
 
@@ -155,15 +163,15 @@ body{
 
 
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon3" style="width: 255px;">RQ Recursos</span>
+                <span class="input-group-text" id="basic-addon3" style="width: 255px;">Villa Digital Recursos</span>
                 <select id="cat1" class="form-control" style="width: 40px;">
                   <option selected disabled value="1" >Categoría</option>
                   <option value="1">Categoría 1</option>
                   <option value="2">Categoría 2</option>
-                  <option value="3">Categoría 3</option>
-                  <option value="4">Categoría Externos</option>
+                  <option value="3">Categoría 3 (Externos)</option>
+                  
                 </select>
-                <input style="text-align: right;" type="number" value="0" class="form-control" id="co1" aria-describedby="basic-addon3">
+                <input style="text-align: right;" type="number"  class="form-control" id="co1" placeholder="Horas" aria-describedby="basic-addon3">
               </div>
 
 
@@ -173,23 +181,17 @@ body{
                   <option selected disabled value="1" >Categoría</option>
                   <option value="1">Categoría 1</option>
                   <option value="2">Categoría 2</option>
-                  <option value="3">Categoría 3</option>
-                  <option value="4">Categoría Externos</option>
+                  <option value="3">Categoría 3 (Externos)</option>
+                  
                 </select>
-                <input style="text-align: right;" type="number" value="0" class="form-control" id="co2" aria-describedby="basic-addon3">
+                <input style="text-align: right;" type="number"  class="form-control" id="co2" placeholder="Horas" aria-describedby="basic-addon3">
               </div>
 
 
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon3" style="width: 255px;">QL uso plataforma  </span>
-                <select id="cat3" class="form-control" style="width: 40px;">
-                  <option selected disabled value="1" >Categoría</option>
-                  <option value="1">Categoría 1</option>
-                  <option value="2">Categoría 2</option>
-                  <option value="3">Categoría 3</option>
-                  <option value="4">Categoría Externos</option>
-                </select>
-                <input style="text-align: right;" type="number" value="0" class="form-control" id="co3" aria-describedby="basic-addon3">
+                <span class="input-group-text" id="basic-addon3" style="width: 255px;">Uso plataforma LMS </span>
+               
+                <input style="text-align: right;" type="number"  class="form-control" id="co3" placeholder="Meses" aria-describedby="basic-addon3">
               </div>
 
 
@@ -200,10 +202,10 @@ body{
                   <option selected disabled value="1" >Categoría</option>
                   <option value="1">Categoría 1</option>
                   <option value="2">Categoría 2</option>
-                  <option value="3">Categoría 3</option>
-                  <option value="4">Categoría Externos</option>
+                  <option value="3">Categoría 3 (Externos)</option>
+                  
                 </select>
-                <input style="text-align: right;" type="number" value="0" class="form-control" id="co4" aria-describedby="basic-addon3">
+                <input style="text-align: right;" type="number"  class="form-control" id="co4" placeholder="Horas" aria-describedby="basic-addon3">
               </div>
 
 
@@ -214,10 +216,10 @@ body{
                   <option selected disabled value="1" >Categoría</option>
                   <option value="1">Categoría 1</option>
                   <option value="2">Categoría 2</option>
-                  <option value="3">Categoría 3</option>
-                  <option value="4">Categoría Externos</option>
+                  <option value="3">Categoría 3 (Externos)</option>
+                  
                 </select>
-                <input style="text-align: right;" type="number" value="0" class="form-control" id="co5" aria-describedby="basic-addon3">
+                <input style="text-align: right;" type="number"  class="form-control" id="co5" placeholder="Horas" aria-describedby="basic-addon3">
               </div>
 
 
@@ -228,10 +230,10 @@ body{
                   <option selected disabled value="1" >Categoría</option>
                   <option value="1">Categoría 1</option>
                   <option value="2">Categoría 2</option>
-                  <option value="3">Categoría 3</option>
-                  <option value="4">Categoría Externos</option>
+                  <option value="3">Categoría 3 (Externos)</option>
+                  
                 </select>
-                <input style="text-align: right;" type="number" value="0" class="form-control" id="co6" aria-describedby="basic-addon3">
+                <input style="text-align: right;" type="number"  class="form-control" id="co6" placeholder="Horas" aria-describedby="basic-addon3">
               </div>
 
              
@@ -260,8 +262,8 @@ body{
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon3" style="width: 300px;">Venta y costos comerciales o de terceros</span>
                 <select id="oct1" class="form-control"  style="text-align: center;">
-                  <option selected value="1">%</option>
-                  <option value="2">$</option>
+                  <option selected value="1" style="text-align: center;">%</option>
+                  <option value="2" style="text-align: center;">$</option>
                 </select>
                 <input style="text-align: right; width: 100px;" type="number" value="0" class="form-control" id="oc1" aria-describedby="basic-addon3">
               </div>
