@@ -4,6 +4,9 @@ let valc2 = ""
 let valc3 = ""
 let valce = ""
 
+let lic = ""
+let users = ""
+
 let pv1h = ""
 let pv1p = ""
 let pv2 = ""
@@ -40,6 +43,9 @@ function getValues(){
     valc3 = parseInt(document.getElementById("valc3").value);
     valce = parseInt(document.getElementById("valce").value);
 
+    lic = parseInt(document.getElementById("lic").value);
+    users = parseInt(document.getElementById("users").value);
+
     pv1h = parseInt(document.getElementById("pv1h").value);
     pv1p = parseInt(document.getElementById("pv1p").value);
     pv2 = parseInt(document.getElementById("pv2").value);
@@ -72,7 +78,7 @@ function calcProyect(){
 
     let catP1 = document.getElementById("cat1").value;
     let catP2 = document.getElementById("cat2").value;
-    let catP3 = document.getElementById("cat3").value;
+    //let catP3 = document.getElementById("cat3").value;
     let catP4 = document.getElementById("cat4").value;
     let catP5 = document.getElementById("cat5").value;
     let catP6 = document.getElementById("cat6").value;
@@ -105,18 +111,8 @@ function calcProyect(){
     }
 
 //----------------------------------------
-    if ( catP3 == "1" ){
-        co3 = co3 * valc1;
-    }
-    else if( catP3 == "2" ){
-        co3 = co3 * valc2;
-    }
-    else if( catP3 == "3" ){
-        co3 = co3 * valc3;
-    }
-    else if( catP3 == "4" ){
-        co3 = co3 * valce;
-    }
+
+        co3 = co3 * lic * users ;
 
 //----------------------------------------
     if ( catP4 == "1" ){
@@ -227,7 +223,7 @@ function calcTotal(){
 
 
 
-    util = cost * 0.2;
+    util = cost * (valce / 100);
     presupuesto = cost + util;
 
     document.getElementById("porcentaje").innerHTML = `
@@ -239,7 +235,7 @@ function calcTotal(){
             <div class="card-body" id="porcentaje">
 
 
-            <h4> 20% del Costo: $ ${util}</h4>
+            <h4> ${valce}% del Costo: $ ${Math.round(util)}</h4>
 
             </div>
 
@@ -248,14 +244,14 @@ function calcTotal(){
     <div class="card-header ">
       <h4>Presupuesto</h4>
     </div>
-    <div class="card-body" ><h4> $ ${presupuesto}</h4> </div>`
+    <div class="card-body" ><h4> $ ${Math.round(presupuesto)}</h4> </div>`
 
 
     document.getElementById("costo").innerHTML = `<div class="card text-white bg-primary mb-3 text-center border-success">
     <div class="card-header ">
       <h4>Costo</h4>
     </div>
-    <div class="card-body" ><h4> $ ${cost}</h4> </div>`
+    <div class="card-body" ><h4> $ ${Math.round(cost)}</h4> </div>`
 
 
 }
