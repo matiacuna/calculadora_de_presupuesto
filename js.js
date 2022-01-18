@@ -33,6 +33,7 @@ let util = ""
 let presupuesto = ""
 let cost = ""
 
+let tabla = ""
 
 //tomo los valores de horas y costos de horas
 function getValues(){
@@ -63,6 +64,7 @@ function getValues(){
     oc2 = parseInt(document.getElementById("oc2").value);
     oc3 = parseInt(document.getElementById("oc3").value);
     oc4 = parseInt(document.getElementById("oc4").value);
+    oc5 = parseInt(document.getElementById("oc5").value);
 
 }
 
@@ -170,6 +172,7 @@ function calcOtrosCostos(){
 
     proyectAndPreVenta = proyect + preVenta;
     cost = proyectAndPreVenta;
+    cost = oc5 + cost;
 
     let oct1 = document.getElementById("oct1").value;
     let oct2 = document.getElementById("oct2").value;
@@ -226,6 +229,14 @@ function calcTotal(){
     util = cost * (valce / 100);
     presupuesto = cost + util;
 
+
+    document.getElementById("costo").innerHTML = `<div class="card text-white bg-primary mb-3 text-center border-success">
+    <div class="card-header ">
+      <h4>Costo</h4>
+    </div>
+    <div class="card-body" ><h4> $ ${Math.round(cost)}</h4> </div>`
+
+
     document.getElementById("porcentaje").innerHTML = `
 
 
@@ -246,15 +257,136 @@ function calcTotal(){
     </div>
     <div class="card-body" ><h4> $ ${Math.round(presupuesto)}</h4> </div>`
 
+    document.getElementById("export").innerHTML = `<button id="boton" class="btn btn-success center inp" type="button" onclick="ExportToExcel('xlsx')">Exportar a excel</button>`
 
-    document.getElementById("costo").innerHTML = `<div class="card text-white bg-primary mb-3 text-center border-success">
-    <div class="card-header ">
-      <h4>Costo</h4>
-    </div>
-    <div class="card-body" ><h4> $ ${Math.round(cost)}</h4> </div>`
 
+    
 
 }
+
+function table(){
+    tabla = `<table border="1">
+
+    <th>Item</th>
+    <th>Costo</th>
+ 
+</thead>
+<tbody>
+
+    <tr>
+      <td>Reuniones pre venta</td>
+      <td>${(pv1h*pv1p)*valpp}</td>
+    </tr>
+
+    <tr>
+      <td>Armado de propuesta</td>
+      <td>${pv2*valpp}</td>
+    </tr>
+
+    <tr>
+    <td>Presentaciones pre venta</td>
+    <td>${pv3*valpp}</td>
+    </tr>
+
+    <tr>
+    <td><p> </p></td>
+    <td><p> </p></td>
+    </tr>
+
+<!-- ------------------- -->
+
+    <tr>
+    <td>Villa Digital Recursos</td>
+    <td>${co1}</td>
+    </tr>
+
+    <tr>
+    <td>Infraestructura (Azure, M365, etc)</td>
+    <td>${co2}</td>
+    </tr>
+
+    <tr>
+    <td>Uso plataforma LMS</td>
+    <td>${co3}</td>
+    </tr>
+
+    <tr>
+    <td>QL otros recursos</td>
+    <td>${co4}</td>
+    </tr>
+
+    <tr>
+    <td>PM y administración</td>
+    <td>${co5}</td>
+    </tr>
+
+    <tr>
+    <td>Soporte y Gobernanza</td>
+    <td>${co6}</td>
+    </tr>
+ 
+    <tr>
+    <td><p> </p></td>
+    <td><p> </p></td>
+    </tr>
+    
+<!-- ------------------- -->
+    <tr>
+    <td>Logística (traslado, alojamiento, manutención)</td>
+    <td>${oc5}</td>
+    </tr>
+
+    <tr>
+    <td>Venta y costos comerciales o de terceros</td>
+    <td>${oc1}</td>
+    </tr>
+
+    <tr>
+    <td>Aspectos financieros y Amortizaciones</td>
+    <td>${oc2}</td>
+    </tr>
+
+    <tr>
+    <td>Impuestos, gravámenes y costes fiscales</td>
+    <td>${oc3}</td>
+    </tr>
+
+    <tr>
+    <td>Desviación probable</td>
+    <td>${oc4}</td>
+    </tr>
+
+    <!-- ------------------- -->
+    <tr>
+    <td><p> </p></td>
+    <td><p> </p></td>
+    </tr>
+
+    <tr>
+    <td>Presupuesto</td>
+    <td>${Math.round(presupuesto)}</td>
+    </tr>
+
+    <tr>
+    <td>Utilidad</td>
+    <td>${Math.round(util)}</td>
+    </tr>
+
+    <tr>
+    <td>Costo</td>
+    <td>${Math.round(cost)}</td>
+    </tr>
+
+
+
+    </tbody>
+   
+  </table>`
+
+   document.getElementById("tabla").innerHTML = tabla;
+}
+
+
 
 
 
@@ -270,7 +402,7 @@ document.addEventListener("DOMContentLoaded", function(e){
         calcProyect();
         calcOtrosCostos();
         calcTotal();
-        
+        table()
     });
 
 
