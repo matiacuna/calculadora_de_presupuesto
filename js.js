@@ -150,13 +150,13 @@ function calcProyect(){
     if ( catP6 == "1" ){
         co6 = co6 * valc1;
     }
-    else if( catP5 == "2" ){
+    else if( catP6 == "2" ){
         co6 = co6 * valc2;
     }
-    else if( catP5 == "3" ){
+    else if( catP6 == "3" ){
         co6 = co6 * valc3;
     }
-    else if( catP5 == "4" ){
+    else if( catP6 == "4" ){
         co6 = co6 * valce;
     }
 
